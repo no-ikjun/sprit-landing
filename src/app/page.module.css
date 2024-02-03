@@ -9,6 +9,11 @@
   top: 0;
 }
 
+.logo {
+  width: 120px;
+  height: 26.17px;
+}
+
 .header_button {
   display: flex;
   flex-direction: row;
@@ -74,6 +79,11 @@
   gap: 5rem;
 }
 
+.mockup_image {
+  width: 420px;
+  height: 475.11px;
+}
+
 .ment_box {
   display: flex;
   flex-direction: column;
@@ -124,6 +134,10 @@
 }
 
 @media (max-width: 768px) {
+  .logo {
+    width: 100px;
+    height: 21.81px;
+  }
   .title {
     font-size: 2rem;
     margin-top: 1rem;
@@ -142,5 +156,9 @@
   }
   .button_row {
     margin-top: 1rem;
+  }
+  .mockup_image {
+    width: 282px;
+    height: 319px;
   }
 }
