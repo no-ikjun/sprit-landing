@@ -21,6 +21,18 @@ export default function Home() {
     console.log(deviceType);
   }, [deviceType]);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <main className={styles.main}>
       <Header />
@@ -44,28 +56,57 @@ export default function Home() {
               <br />
               스프릿과 함께 독서하세요!
             </p>
-            <div className={styles.button_row}>
-              <Link href="https://ikjun.com" style={{ textDecoration: "none" }}>
-                <div className={styles.app_button}>
-                  <Image src="/apple.svg" alt="Apple" width={30} height={30} />
-                  <p>App Store</p>
-                </div>
-              </Link>
+            {!isMobile ? (
+              <div className={styles.button_row}>
+                <Link
+                  href="https://ikjun.com"
+                  style={{ textDecoration: "none" }}
+                >
+                  <div className={styles.app_button}>
+                    <Image
+                      src="/apple.svg"
+                      alt="Apple"
+                      width={30}
+                      height={30}
+                    />
+                    <p>App Store</p>
+                  </div>
+                </Link>
+                <Link
+                  href="https://ikjun.com/experiences"
+                  style={{ textDecoration: "none" }}
+                >
+                  <div className={styles.app_button}>
+                    <Image
+                      src="/google.svg"
+                      alt="Google"
+                      width={30}
+                      height={30}
+                    />
+                    <p>Google Play</p>
+                  </div>
+                </Link>
+              </div>
+            ) : (
               <Link
-                href="https://ikjun.com/experiences"
+                href={
+                  deviceType == "ios"
+                    ? "https://ikjun.com"
+                    : "https://ikjun.com/experiences"
+                }
                 style={{ textDecoration: "none" }}
               >
-                <div className={styles.app_button}>
+                <div className={styles.mobile_button}>
+                  <p>다운로드 하기</p>
                   <Image
-                    src="/google.svg"
-                    alt="Google"
-                    width={30}
-                    height={30}
+                    src="/right_arrow.svg"
+                    alt="Arrow"
+                    width={9}
+                    height={16}
                   />
-                  <p>Google Play</p>
                 </div>
               </Link>
-            </div>
+            )}
           </div>
         </div>
         <p className={styles.copyright}>© 2024 SPRIT. All Rights Reserved.</p>

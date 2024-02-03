@@ -133,6 +133,26 @@
   color: #474747;
 }
 
+.mobile_button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  background-color: #36ced8;
+  height: 54px;
+  border-radius: 27px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-top: 1rem;
+}
+
+.mobile_button > p {
+  font-size: 1.2rem;
+  font-family: "IBMPlexSansRegular";
+  color: white;
+  text-decoration: none;
+}
+
 @media (max-width: 768px) {
   .logo {
     width: 100px;
@@ -149,7 +169,7 @@
   .ment_box > p {
     align-items: center;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
   .ment_box {
     align-items: center;
