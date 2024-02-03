@@ -1,9 +1,26 @@
+"use client";
+
 import Header from "@/components/header";
 import styles from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [deviceType, setDeviceType] = useState("");
+
+  useEffect(() => {
+    const userAgent = navigator.userAgent || navigator.vendor;
+    if (/iPad|iPhone|iPod/.test(userAgent)) {
+      setDeviceType("ios");
+    } else if (/android/i.test(userAgent)) {
+      setDeviceType("android");
+    } else {
+      setDeviceType("web");
+    }
+    console.log(deviceType);
+  }, [deviceType]);
+
   return (
     <main className={styles.main}>
       <Header />
@@ -34,7 +51,10 @@ export default function Home() {
                   <p>App Store</p>
                 </div>
               </Link>
-              <Link href="https://ikjun.com" style={{ textDecoration: "none" }}>
+              <Link
+                href="https://ikjun.com/experiences"
+                style={{ textDecoration: "none" }}
+              >
                 <div className={styles.app_button}>
                   <Image
                     src="/google.svg"
