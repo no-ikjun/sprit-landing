@@ -142,13 +142,13 @@
   height: 54px;
   border-radius: 27px;
   padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  margin-top: 1rem;
+  padding-right: 2rem;
+  margin-top: 2rem;
 }
 
 .mobile_button > p {
   font-size: 1.2rem;
-  font-family: "IBMPlexSansRegular";
+  font-family: "IBMPlexSansMedium";
   color: white;
   text-decoration: none;
 }
