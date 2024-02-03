@@ -5,7 +5,13 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className={styles.header}>
-      <Image src="/logo.svg" alt="My Site" width={120} height={26.17} />
+      <Image
+        src="/logo.svg"
+        alt="My Site"
+        width={120}
+        height={26.17}
+        className={styles.logo}
+      />
       <div className={styles.header_button}>
         <a href="mailto:sprit@ikjun.com" className={styles.mail}>
           문의하기

@@ -14,7 +14,13 @@ export default function Home() {
           <span style={{ color: "#36CED8" }}>스프릿</span>과 함께
         </h1>
         <div className={styles.content}>
-          <Image src="/mockup.png" alt="Mockup" width={420} height={475.11} />
+          <Image
+            src="/mockup.png"
+            alt="Mockup"
+            width={420}
+            height={475.11}
+            className={styles.mockup_image}
+          />
           <div className={styles.ment_box}>
             <p>
               독서습관을 꾸준히 유지하고 싶다면?
