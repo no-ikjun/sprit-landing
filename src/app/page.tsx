@@ -73,7 +73,7 @@ export default function Home() {
                   </div>
                 </Link>
                 <Link
-                  href="https://ikjun.com/experiences"
+                  href="https://play.google.com/store/apps/details?id=com.ikjunchoi_android.sprit"
                   style={{ textDecoration: "none" }}
                 >
                   <div className={styles.app_button}>
@@ -92,7 +92,7 @@ export default function Home() {
                 href={
                   deviceType == "ios"
                     ? "https://ikjun.com"
-                    : "https://ikjun.com/experiences"
+                    : "https://play.google.com/store/apps/details?id=com.ikjunchoi_android.sprit"
                 }
                 style={{ textDecoration: "none" }}
               >
