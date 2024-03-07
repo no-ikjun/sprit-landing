@@ -36,7 +36,7 @@ export default function Header() {
           href={
             deviceType == "ios"
               ? "https://ikjun.com"
-              : "https://ikjun.com/experiences"
+              : "https://play.google.com/store/apps/details?id=com.ikjunchoi_android.sprit"
           }
           style={{ textDecoration: "none" }}
         >
