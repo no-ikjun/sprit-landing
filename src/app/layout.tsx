@@ -7,9 +7,13 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "스프릿",
-  description: "꾸준한 독서를 위해, 스프릿",
+  description: "꾸준한 독서를 위해, 스프릿 📚",
   icons: {
     icon: "/favicon.ico",
+  },
+  openGraph: {
+    title: "스프릿",
+    description: "꾸준한 독서를 위해, 스프릿 📚",
   },
 };
 
