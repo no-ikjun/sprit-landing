@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 export default function Header() {
   const [deviceType, setDeviceType] = useState("");
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const userAgent = navigator.userAgent || navigator.vendor;
@@ -17,10 +18,21 @@ export default function Header() {
     } else {
       setDeviceType("web");
     }
-    console.log(deviceType);
-  }, [deviceType]);
+  }, []);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className={styles.header}>
+    <header
+      className={`${styles.header} ${scrolled ? styles.header_scrolled : ""}`}
+    >
       <Image
         src="/logo.svg"
         alt="My Site"
