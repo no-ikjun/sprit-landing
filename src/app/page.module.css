@@ -185,6 +185,7 @@
   border: 1px solid rgba(54, 206, 216, 0.45);
   background: rgba(255, 255, 255, 0.6);
   box-shadow: 0 8px 24px rgba(17, 138, 150, 0.12);
+  cursor: pointer;
 }
 
 .cta_secondary:hover {

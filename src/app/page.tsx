@@ -67,17 +67,28 @@ export default function Home() {
             {!isMobile ? (
               <div className={styles.button_row}>
                 <Link
-                  href="https://apps.apple.com/us/app/%EC%8A%A4%ED%94%84%EB%A6%BF-%EA%BE%B8%EC%A4%80%ED%95%9C-%EB%8F%85%EC%84%9C%EC%8A%B5%EA%B4%80-%EB%A7%8C%EB%93%A4%EA%B8%B0/id6475924225"
+                  href={
+                    deviceType === "ios"
+                      ? "https://apps.apple.com/us/app/%EC%8A%A4%ED%94%84%EB%A6%BF-%EA%BE%B8%EC%A4%80%ED%95%9C-%EB%8F%85%EC%84%9C%EC%8A%B5%EA%B4%80-%EB%A7%8C%EB%93%A4%EA%B8%B0/id6475924225"
+                      : "https://play.google.com/store/apps/details?id=com.ikjunchoi_android.sprit"
+                  }
                   className={`${styles.cta_button} ${styles.cta_primary}`}
                 >
-                  지금 시작하기
+                  다운로드 하기
                 </Link>
-                <Link
-                  href="https://play.google.com/store/apps/details?id=com.ikjunchoi_android.sprit"
+                <p
+                  onClick={() => {
+                    const featuresSection = document.querySelector(
+                      `.${styles.features_section}`
+                    );
+                    if (featuresSection) {
+                      featuresSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                   className={`${styles.cta_button} ${styles.cta_secondary}`}
                 >
                   더 알아보기
-                </Link>
+                </p>
               </div>
             ) : (
               <Link
@@ -232,16 +243,15 @@ export default function Home() {
             <span className={styles.feature_badge}>
               <span aria-hidden="true">🤝</span> 기능 2
             </span>
-            <h3 className={styles.feature_heading}>커뮤니티</h3>
+            <h3 className={styles.feature_heading}>독서량 분석</h3>
             <p className={styles.feature_description}>
-              같은 책을 읽는 사람들과 의견을 나누고 연결되세요. 독서 모임에
-              참여하고 새로운 독서 친구들과 대화를 이어가며 독서 경험을
-              확장해보세요.
+              당신의 독서 습관을 시각적으로 분석해보세요. 월별 독서량, 장르별
+              통계, 평균 평점 등 다양한 데이터를 한눈에 확인할 수 있습니다.
             </p>
             <ul className={styles.feature_list}>
-              <li>관심 주제별 독서 모임 참여</li>
-              <li>다양한 의견과 추천 공유</li>
-              <li>독서 챌린지로 동기 부여</li>
+              <li>월간/주간 독서량 통계</li>
+              <li>장르별 분석 및 선호도</li>
+              <li>독서 목표 설정 및 달성률</li>
             </ul>
           </div>
         </article>
@@ -255,15 +265,15 @@ export default function Home() {
             >
               <span aria-hidden="true">✨</span> 기능 3
             </span>
-            <h3 className={styles.feature_heading}>개인화된 추천</h3>
+            <h3 className={styles.feature_heading}>독서 내용 공유</h3>
             <p className={styles.feature_description}>
-              당신의 취향과 독서 패턴을 학습해 AI가 맞춤형 책을 추천합니다. 더
-              이상 무엇을 읽을지 고민하지 마세요.
+              당신의 독서 감상과 인상 깊은 구절을 커뮤니티와 공유하세요. 같은
+              책을 읽는 사람들과 의견을 나누고, 다양한 관점을 배워보세요.
             </p>
             <ul className={styles.feature_list}>
-              <li>선호 장르 기반 큐레이션</li>
-              <li>읽은 책과 유사한 추천 목록</li>
-              <li>매주 업데이트되는 독서 인사이트</li>
+              <li>독서 감상 및 리뷰 작성</li>
+              <li>인상 깊은 구절 공유</li>
+              <li>다른 독자와 토론 및 댓글</li>
             </ul>
           </div>
           <div className={styles.feature_visual}>
