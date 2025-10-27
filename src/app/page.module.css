@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   width: 100%;
-  background-color: #ffffff1b;
+  background-color: #ffffff00;
   box-shadow: none;
   backdrop-filter: blur(6px);
   z-index: 100;
@@ -493,7 +493,7 @@
 }
 
 .cta_heading {
-  font-size: clamp(2.2rem, 4.4vw, 3.1rem);
+  font-size: clamp(1.8rem, 3.8vw, 2.6rem);
   font-family: "PretendardExtraBold";
   color: #082a2f;
 }
