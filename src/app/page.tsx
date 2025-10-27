@@ -61,8 +61,9 @@ export default function Home() {
               <span className={styles.highlight}>&ldquo;갓생&rdquo;</span> 살기
             </h1>
             <p className={styles.subtitle}>
-              스프릿과 함께 독서 습관을 만들고, 같은 책을 읽는 사람들과
-              연결하세요. 당신의 독서 여정을 더 풍요롭게 만들어보세요.
+              하루 한 장, 스프릿과 함께 꾸준히 읽는 습관을 만들어보세요.
+              <br />
+              작은 습관이 쌓여, 더 깊은 독서로 이어집니다.
             </p>
             {!isMobile ? (
               <div className={styles.button_row}>
@@ -110,15 +111,15 @@ export default function Home() {
             )}
             <div className={styles.metrics}>
               <div className={styles.metric}>
-                <strong>50K+</strong>
+                <strong>400+</strong>
                 <span>활동 중인 독자</span>
               </div>
               <div className={styles.metric}>
-                <strong>100K+</strong>
+                <strong>1.2K+</strong>
                 <span>등록된 책</span>
               </div>
               <div className={styles.metric}>
-                <strong>1M+</strong>
+                <strong>1.4K+</strong>
                 <span>독서 기록</span>
               </div>
             </div>
@@ -165,79 +166,25 @@ export default function Home() {
             </ul>
           </div>
           <div className={styles.feature_visual}>
-            <div className={styles.feature_card_canvas}>
-              <div className={styles.feature_card_head}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className={styles.feature_card_icon}
-                >
-                  <path
-                    d="M5.5 5.2c0-.66.38-1.26.98-1.55l5.16-2.53a1.2 1.2 0 0 1 1.06 0l5.16 2.53c.6.29.98.9.98 1.55V20c0 .66-.38 1.26-.98 1.55l-5.16 2.53a1.2 1.2 0 0 1-1.06 0l-5.16-2.53a1.72 1.72 0 0 1-.98-1.55V5.2Z"
-                    stroke="currentColor"
-                    strokeWidth="1.4"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-              <div className={styles.feature_card_body}>
-                <div className={styles.feature_card_line} />
-                <div className={styles.feature_card_line} />
-                <div className={styles.feature_card_line_short} />
-                <div className={styles.feature_card_progress}>
-                  <span>진행률</span>
-                  <span>65%</span>
-                </div>
-                <div className={styles.feature_card_bar}>
-                  <div className={styles.feature_card_bar_fill} />
-                </div>
-              </div>
-            </div>
+            <Image
+              src="/record.png"
+              alt="Feature 1 Visual"
+              width={256}
+              height={512}
+              className={styles.feature_image}
+            />
           </div>
         </article>
 
         <article className={styles.feature_row}>
           <div className={styles.feature_visual}>
-            <div className={styles.feature_card_canvas_secondary}>
-              <div className={styles.feature_card_head}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className={styles.feature_card_icon}
-                >
-                  <path
-                    d="M12 12.5c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4Z"
-                    stroke="currentColor"
-                    strokeWidth="1.4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M17.59 19.64c-1.29-2.4-3.81-4.06-6.79-4.06s-5.5 1.66-6.79 4.06"
-                    stroke="currentColor"
-                    strokeWidth="1.4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-              <div
-                className={`${styles.feature_card_body} ${styles.feature_card_body_secondary}`}
-              >
-                <div className={styles.feature_avatar_row}>
-                  <span className={styles.feature_avatar} />
-                  <div className={styles.feature_card_line} />
-                </div>
-                <div className={styles.feature_card_line_short} />
-                <div className={styles.feature_tag_row}>
-                  <span className={styles.feature_tag}>새 모임</span>
-                  <span className={styles.feature_tag}>토론</span>
-                </div>
-                <div className={styles.feature_card_line} />
-              </div>
-            </div>
+            <Image
+              src="/analysis.png"
+              alt="Feature 1 Visual"
+              width={256}
+              height={512}
+              className={styles.feature_image}
+            />
           </div>
           <div className={styles.feature_copy}>
             <span className={styles.feature_badge}>
@@ -245,12 +192,12 @@ export default function Home() {
             </span>
             <h3 className={styles.feature_heading}>독서량 분석</h3>
             <p className={styles.feature_description}>
-              당신의 독서 습관을 시각적으로 분석해보세요. 월별 독서량, 장르별
-              통계, 평균 평점 등 다양한 데이터를 한눈에 확인할 수 있습니다.
+              당신의 독서 습관을 시각적으로 분석해보세요. 주간 독서량, 도서 별
+              분포 등 다양한 데이터를 한눈에 확인할 수 있습니다.
             </p>
             <ul className={styles.feature_list}>
               <li>월간/주간 독서량 통계</li>
-              <li>장르별 분석 및 선호도</li>
+              <li>도서 별 독서량 분석</li>
               <li>독서 목표 설정 및 달성률</li>
             </ul>
           </div>
@@ -267,58 +214,23 @@ export default function Home() {
             </span>
             <h3 className={styles.feature_heading}>독서 내용 공유</h3>
             <p className={styles.feature_description}>
-              당신의 독서 감상과 인상 깊은 구절을 커뮤니티와 공유하세요. 같은
-              책을 읽는 사람들과 의견을 나누고, 다양한 관점을 배워보세요.
+              당신의 독서 감상과 인상 깊은 구절을 커뮤니티와 공유하세요.
+              팔로워들과 의견을 나누고, 다양한 관점을 배워보세요.
             </p>
             <ul className={styles.feature_list}>
               <li>독서 감상 및 리뷰 작성</li>
               <li>인상 깊은 구절 공유</li>
-              <li>다른 독자와 토론 및 댓글</li>
+              <li>다른 독자와의 소통</li>
             </ul>
           </div>
           <div className={styles.feature_visual}>
-            <div className={styles.feature_card_canvas}>
-              <div className={styles.feature_card_head}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className={styles.feature_card_icon}
-                >
-                  <path
-                    d="M11.85 2.6c.03-.1.17-.1.2 0l1.3 4.26a.11.11 0 0 0 .1.08l4.47.14c.11 0 .15.15.07.22l-3.6 2.7a.11.11 0 0 0-.04.12l1.23 4.3c.03.1-.08.17-.16.1l-3.66-2.64a.12.12 0 0 0-.13 0l-3.66 2.63c-.08.06-.19-.02-.16-.1l1.23-4.29a.11.11 0 0 0-.04-.12l-3.6-2.7c-.09-.07-.04-.22.07-.22l4.47-.14a.11.11 0 0 0 .1-.08l1.3-4.26Z"
-                    stroke="currentColor"
-                    strokeWidth="1.4"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
-              <div className={styles.feature_card_body}>
-                <div className={styles.feature_card_bar_group}>
-                  <div className={styles.feature_card_bar_item}>
-                    <span />
-                    <div>
-                      <div className={styles.feature_card_line_micro} />
-                      <div className={styles.feature_card_line_micro} />
-                    </div>
-                  </div>
-                  <div className={styles.feature_card_bar_item}>
-                    <span />
-                    <div>
-                      <div className={styles.feature_card_line_micro} />
-                      <div className={styles.feature_card_line_micro} />
-                    </div>
-                  </div>
-                  <div className={styles.feature_card_bar_item}>
-                    <span />
-                    <div>
-                      <div className={styles.feature_card_line_micro} />
-                      <div className={styles.feature_card_line_micro} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Image
+              src="/social.png"
+              alt="Feature 1 Visual"
+              width={256}
+              height={512}
+              className={styles.feature_image}
+            />
           </div>
         </article>
       </section>
