@@ -188,7 +188,7 @@ export default function Home() {
           </div>
           <div className={styles.feature_copy}>
             <span className={styles.feature_badge}>
-              <span aria-hidden="true">🤝</span> 기능 2
+              <span aria-hidden="true">📊</span> 기능 2
             </span>
             <h3 className={styles.feature_heading}>독서량 분석</h3>
             <p className={styles.feature_description}>
@@ -210,7 +210,7 @@ export default function Home() {
             <span
               className={`${styles.feature_badge} ${styles.feature_badge_primary}`}
             >
-              <span aria-hidden="true">✨</span> 기능 3
+              <span aria-hidden="true">💬</span> 기능 3
             </span>
             <h3 className={styles.feature_heading}>독서 내용 공유</h3>
             <p className={styles.feature_description}>
