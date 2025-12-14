@@ -54,14 +54,15 @@ export default function Home() {
                   />
                 </svg>
               </span>
-              독서의 새로운 경험
+              새로운 독서 경험
             </div>
             <h1 className={styles.title}>
-              오늘부터{" "}
-              <span className={styles.highlight}>&ldquo;갓생&rdquo;</span> 살기
+              꾸준히 읽는 습관,
+              <br />
+              <span className={styles.highlight}>스프릿</span>으로 시작하세요.
             </h1>
             <p className={styles.subtitle}>
-              하루 한 장, 스프릿과 함께 꾸준히 읽는 습관을 만들어보세요.
+              하루 한 번, 스프릿과 함께 꾸준히 읽는 습관을 만들어보세요.
               <br />
               작은 습관이 쌓여, 더 깊은 독서로 이어집니다.
             </p>
